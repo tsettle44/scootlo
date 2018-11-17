@@ -23,5 +23,21 @@
     "ios": {
       "supportsTablet": true
     }
+  },
+  "expo": {
+   "name": "scootlo",
+   "icon": "./assets/scootlo.png",
+   "version": "1.0.0",
+   "slug": "scootlo",
+   "sdkVersion": "31.0.0",
+   "ios": {
+     "bundleIdentifier": "com.scootlo.scootlo"
+   },
+   "android": {
+     "package": "com.scootlo.scootlo",
+     "config": {
+      "googleMaps": { "apiKey": "AIzaSyAC82s_Z1AApSBvlGI3mba8xIOkz1_-Vsg" }   
+   }
+   }
   }
 }
