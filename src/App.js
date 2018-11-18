@@ -34,32 +34,32 @@ export default class App extends React.Component {
   render() {
     return (
       <MapView
-    style={{ flex: 1 }}
-    region={{
-      latitude: 40.76727216,
-      longitude: -73.99392888,
-      latitudeDelta: 0.0922,
-      longitudeDelta: 0.0421,
-    }}
-  >
-        {this.state.isLoading ? null : this.state.markers.map((marker, index) => {
-     const coords = {
-         latitude: marker.latitude,
-         longitude: marker.longitude,
-     };
+        style={{ flex: 1 }}
+        region={{
+          latitude: 40.76727216,
+          longitude: -73.99392888,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }}
+      >
+      {this.state.isLoading ? null : this.state.markers.map((marker, index) => {
+        const coords = {
+            latitude: marker.latitude,
+            longitude: marker.longitude,
+        };
 
-     const metadata = `Status: ${marker.statusValue}`;
+      const metadata = `Status: ${marker.statusValue}`;
 
-     return (
+      return (
          <MapView.Marker
             key={index}
             coordinate={coords}
             title={marker.stationName}
             description={metadata}
          />
-     );
-    })}
-  </MapView>
+          );
+          })}
+        </MapView>
     );
   }
 }
